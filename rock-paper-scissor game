@@ -1,0 +1,30 @@
+import random
+def winner():
+    print ("welcome to the game Rock,Paper,Scissor")
+    print('0= Rock , 1= Paper, 2= Scissor')  
+    mylist=['Rock','Paper','Scissor']
+    g1 = random.choice(mylist)
+    print('player input your choice 0 or 1 or 2') 
+    p1 = input()
+    x=mylist[int(p1)]
+    print(f'player your choice is {x}')
+    if g1==p1:
+        print(f'the match is draw and you selected {p1} and computer selected {g1} ')
+    elif g1=='Paper' and x=='Rock' :
+        print(f' computer wins the match and you selected {x} and computer selected {g1} ')
+    elif g1=='Paper' and x=='Scissor' :
+        print(f' you won the match and you selected {x} and computer selected {g1} ')
+    elif x=='Paper' and g1=='Scissor' :
+        print(f' computer wins the match and you selected {x} and computer selected {g1} ')
+    elif x=='Paper' and g1=='Rock' :
+        print(f' you won the match and you selected {x} and computer selected {g1} ')
+    elif x=='Rock' and g1=='Scissor' :
+        print(f' you won the match and you selected {x} and computer selected {g1} ')
+    elif g1=='Rock' and x=='Scissor' :
+        print(f' computer wins the match and you selected {x} and computer selected {g1} ')
+    n=input('do you want to play the game again Y 0r N?:')
+    if n.lower()=='y':
+      winner()
+    else:
+      print('Thank you for playing come again...')
+winner()       
